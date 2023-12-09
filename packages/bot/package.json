@@ -1,0 +1,24 @@
+{
+  "name": "bot",
+  "scripts": {
+    "dev": "pnpm nodemon --exec 'pnpm ts-node' ./src/index.ts",
+    "build": "pnpm tsc --build",
+    "deploy_": "pnpm serverless deploy",
+    "info": "pnpm serverless info",
+    "purge": "pnpm serverless remove",
+    "webhook:set": "sh ./set-webhook.sh",
+    "webhook:remove": "sh ./remove-webhook.sh"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "serverless": "^3.16.0",
+    "serverless-http": "^3.1.1",
+    "telegraf": "^4.11.2"
+  },
+  "devDependencies": {
+    "@yandex-cloud/serverless-plugin": "^1.0.2",
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.5.4"
+  }
+}
